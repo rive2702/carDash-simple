@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+	
+	 <link href="https://vjs.zencdn.net/7.2/video-js.min.css" rel="stylesheet">
+	 <script src="https://vjs.zencdn.net/7.2/video.min.js"></script> 
+
+	<!--<link rel="stylesheet" href="css/video-js.css"> -->
+	<!--<script src="js/video.js"></script> -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>CarDash GUI</title>
+</head>
+<body>
+	<header>
+		<div id="particles-js"> 
+			
+		</div>
+		<h1 class="titulo">Pyqt5 + Arduino: Simple Car Dashboard</h1>
+		<hr/>
+	</header>
+
+	<main>
+		<div class="contenedor">
+			<video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
+				<source src="video/funcionamiento.mp4" type="video/mp4">
+			</video>
+	
+			<article>
+				<h2>Serial comunication between Python and Arduino</h2>
+				<p>
+					This project has as its first objective the design of a very simple graphical interface, demonstrative, of the dashboard of a car. 
+					The second objective is to establish a proper communication between Python, Qt Designer and Arduino, 
+					through a serial communication and through a Python library called Pyqt5.
+				</p>
+				<p>
+					For the project, electronic materials from Arduino were used to be able to interact with the graphical interface created in Qt Designer through pyqt.
+				</p>
+				<p>
+					Detailed list of materials: 
+				</p>
+				<p>
+					<ul><br>
+						<li>1x Arduino UNO (cable included)</li>
+						<li>1x Temperature sensor: lm35</li>
+						<li>4x Pushbuttons</li>
+						<li>2x 10k Potentiometers</li>
+						<li>1x Protoboard</li>
+						<li>6x 330 ohm resistors</li>
+						<li>Cables</li>
+					</ul>
+				</p><br>
+				<p>
+					The main objective of the project is to recreate a dashboard of a car, in which vehicle information is displayed. 
+					This dashboard will show the main information lights, such as the door open sensor, gasoline level sensor,
+					engine temperature sensor, rpm and speed sensor, an odometer, directional lights, and stop lights.
+				</p>
+			</article>
+		</div>
+	</main>
+
+	<script>
+		var reproductor = videojs('fm-video', {
+			fluid: true
+		});
+	</script>
+	<script type="text/javascript" src="js/particles.min.js"></script>
+	<script>
+		particlesJS(
+			{
+
+				"particles": {
+					"number": {
+					"value": 80,
+					"density": {
+						"enable": true,
+						"value_area": 630.1693580149663
+					}
+					},
+					"color": {
+					"value": "#00fcf9"
+					},
+					"shape": {
+					"type": "polygon",
+					"stroke": {
+						"width": 0,
+						"color": "#000000"
+					},
+					"polygon": {
+						"nb_sides": 6
+					},
+					"image": {
+						"src": "img/github.svg",
+						"width": 100,
+						"height": 100
+					}
+					},
+					"opacity": {
+					"value": 0.5,
+					"random": false,
+					"anim": {
+						"enable": false,
+						"speed": 1,
+						"opacity_min": 0.1,
+						"sync": false
+					}
+					},
+					"size": {
+					"value": 2,
+					"random": true,
+					"anim": {
+						"enable": false,
+						"speed": 40,
+						"size_min": 0.1,
+						"sync": false
+					}
+					},
+					"line_linked": {
+					"enable": true,
+					"distance": 472.6270185112247,
+					"color": "#007767",
+					"opacity": 0.025,
+					"width": 1
+					},
+					"move": {
+					"enable": true,
+					"speed": 1.5,
+					"direction": "none",
+					"random": true,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false,
+					"attract": {
+						"enable": false,
+						"rotateX": 9676.12954818073,
+						"rotateY": 2159.136345461816
+					}
+					}
+				},
+				"interactivity": {
+					"detect_on": "canvas",
+					"events": {
+					"onhover": {
+						"enable": true,
+						"mode": "grab"
+					},
+					"onclick": {
+						"enable": true,
+						"mode": "push"
+					},
+					"resize": true
+					},
+					"modes": {
+					"grab": {
+						"distance": 182.24083328608577,
+						"line_linked": {
+						"opacity": 1
+						}
+					},
+					"bubble": {
+						"distance": 400,
+						"size": 40,
+						"duration": 2,
+						"opacity": 8,
+						"speed": 3
+					},
+					"repulse": {
+						"distance": 200,
+						"duration": 0.4
+					},
+					"push": {
+						"particles_nb": 4
+					},
+					"remove": {
+						"particles_nb": 2
+					}
+					}
+				},
+				"retina_detect": true
+				}
+		)
+	</script>
+</body>
+</html>
